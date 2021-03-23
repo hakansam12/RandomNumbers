@@ -1,0 +1,16 @@
+h1 {
+    text-align:center;
+    font-family: 'Dancing Script', cursive;
+}
+p {
+    text-align:center;
+}
+.inputs {
+    text-align: center;
+}
+body {
+    background-image: url('static/background1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family:optima;
+}

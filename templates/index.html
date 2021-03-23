@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    h1 {
+        text-align:center;
+        font-family: 'Dancing Script', cursive;
+    }
+    p {
+        text-align:center;
+    }
+    .inputs {
+        text-align: center;
+    }
+    body {
+        background-image: url('static/background1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family:optima;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1 color="black" align="center" style = "font-size:40px">Lucky Numbers</h1>
+    <!-- <p color="black" align="center" style = "font-size:25px"></p> -->
+    <form action = "/results" method = "POST">
+          <p><label for="number" style="color:black;size:20">Type in a number&nbsp;</label></p>
+          <p><input size="40" id="number" type="text" name="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" required></p>
+              <div class="inputs">
+              <p style="color:black;size:20">Select the area that you want to learn about </p>
+                <input type="checkbox" id="fact1" name="fact" value="Trivia"><label for="fact1" required>&nbsp;Trivia</label><br>
+                <input type="checkbox" id="fact2" name="fact" value="Math"><label for="fact2">&nbsp;Math</label><br>
+                <input type="checkbox" id="fact3" name="fact" value="Date"><label for="fact3">&nbsp;Date</label><br>
+                <input type="checkbox" id="fact4" name="fact" value="Year"><label for="fact4">&nbsp;Year</label><br>
+              </div>
+          <p><input type = "submit" value = "Click for the facts!" /></p>
+    </form>
+
+    <p color="black" align="center" style = "font-size:25px">Do you want some random facts? Let's go!</p>
+    <form action = "/random" method = "POST">
+        <p><label for="number" style="color:black;size:20">How many number facts do you want to see?</label></p>
+        <p><input size="40" id="numbers" type="text" name="numbers" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" required></p>
+        <p><label for="number" style="color:black;size:20">What is the greatest number you want to see?</label></p>
+        <p><input size="40" id="maximum" type="text" name="maximum" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" required></p>
+            <p style="color:black;size:20">Indicate the number facts you want to see for each area below</p>
+            <p><label for="number" style="color:black;size:20">Trivia</label></p>
+            <p><input size="40" id="randomtrivia" type="text" name="randomtrivia" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" required></p>
+            <p><label for="number" style="color:black;size:20">Math</label></p>
+            <p><input size="40" id="randommath" type="text" name="randommath" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" required></p>
+            <p><label for="number" style="color:black;size:20">Date</label></p>
+            <p><input size="40" id="randomdate" type="text" name="randomdate" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" required></p>
+            <p><label for="number" style="color:black;size:20">Year</label></p>
+            <p><input size="40" id="randomyear" type="text" name="randomyear" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" required></p>
+        <p><input type = "submit" value = "Click for Results!" /></p>
+    </form>
+
+</body>
+</html>

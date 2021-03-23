@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<script type = "text/javascript">
+function goBack() {
+  window.history.back()
+}
+</script>
+<style>
+    body {
+        background-image: url('static/background1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family:optima;
+    }
+    .buttons {
+        text-align: center;
+    }
+    .footer {
+        text-align:center;
+    }
+    h1 {
+        text-align:center;
+        font-family: 'Dancing Script', cursive;
+    }
+</style>
+<body>
+    <h1 color="black" align="center" style = "font-size:40px">Here's Some Interesting Things About Random Numbers!</h1>
+    <ul>
+        {% for response, url in response_and_urls %}
+            <li>{{response}}</li>
+            <p><button onclick="location.href = '{{url}}'" type="button">Learn More!</button></p>
+            </br>
+        {% endfor %}
+    </ul>
+    <div class = "buttons">
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+</body>
+</html>

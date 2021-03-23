@@ -1,0 +1,16 @@
+body {
+    background-image: url('static/background1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family:optima;
+}
+.buttons {
+    text-align: center;
+}
+.footer {
+    text-align:center;
+}
+h1 {
+    text-align:center;
+    font-family: 'Dancing Script', cursive;
+}
